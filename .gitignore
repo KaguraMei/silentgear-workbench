@@ -5,3 +5,4 @@ artifacts/*.tar
 test-results/
 playwright-report/
 *.local
+.font-tools/

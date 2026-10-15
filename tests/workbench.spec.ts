@@ -1,7 +1,7 @@
 import {test,expect,type Page} from '@playwright/test';
 import E from '../src/engine.js';
 import {writeFileSync} from 'node:fs';
-async function canvasPainted(page:Page){await expect.poll(()=>page.locator('#gear-art').evaluate((c:HTMLCanvasElement)=>{const a=c.getContext('2d')!.getImageData(0,0,c.width,c.height).data;let n=0;for(let i=3;i<a.length;i+=4)if(a[i]>0)n++;return n;})).toBeGreaterThan(500);}
+async function canvasPainted(page:Page){await expect(page.locator('#gear-art')).toHaveAttribute('data-ready','true');await expect(page.locator('#gear-art')).toHaveAttribute('data-renderer','three-webgl');await expect.poll(()=>page.locator('#gear-art').evaluate((c:HTMLCanvasElement)=>Number(c.dataset.triangles))).toBeGreaterThan(500);}
 test('configure, grade, compare, hover/tap, wear and reset',async({page,isMobile},info)=>{
  const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().startsWith('http://127.0.0.1')&&r.status()>=400)errors.push(r.status()+' '+r.url());});
  await page.goto('/');await expect(page.getByRole('heading',{level:1})).toHaveText('强化黑曜石剑');await canvasPainted(page);

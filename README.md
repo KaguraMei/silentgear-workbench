@@ -34,7 +34,8 @@ npm run preview -- --port 4173
 |---|---|
 | `src/App.tsx` | 配装状态、存储、导入导出、分享、模态窗 |
 | `src/Panels.tsx` | 部件配置、材料库、属性、词条面板 |
-| `src/CanvasStage.tsx` | 背景画布与原始像素贴图组合；按需重绘，DPR 上限 2 |
+| `src/CanvasStage.tsx` | Three.js 装备展示与工坊场景 |
+| `src/fonts.css` / `public/fonts/` | 本地 HarmonyOS Sans SC 正文与 Monocraft 英文标签、数值 |
 | `src/Tooltip.tsx` | 指针、键盘和触屏说明层，边界定位 |
 | `src/engine.js` / `engine.d.ts` | 不依赖 React/DOM 的纯计算函数和类型契约 |
 | `src/data.js` | 从模组及本地翻译提取的数据快照 |
@@ -68,4 +69,25 @@ npm run test:browser
 - [高伤害武器与防具列表](public/docs/equipment.md)
 - [第三方来源](THIRD_PARTY_NOTICES.md)
 
-托管配置保存在 `.openai/hosting.json`。Sites 项目 ID 已绑定，更新时复用该站点，不重复创建。
+## GitHub Pages
+
+本工程直接构建为静态文件，不需要绑定 Sites 或其他持久站点。`vite.config.ts` 使用 `base: './'`，适合 `https://用户名.github.io/仓库名/` 的子路径。页面资源与字体均随 `dist/` 分发，分享状态使用 hash，不需要服务端路由回退。
+
+1. 把工程上传到自己的 GitHub 仓库。
+2. 仓库 **Settings → Pages → Source** 选择 **GitHub Actions**。
+3. 在 **Actions** 中打开 **Deploy workbench to GitHub Pages**，点击 **Run workflow**。
+
+工作流只有手动触发入口，不会因推送自动发布；本地准备工作不会触发部署。也可以运行 `npm run build` 后自行托管 `dist/`。实际 GitHub 部署需要仓库开启 Pages。
+
+## 字体与素材
+
+正文使用 **HarmonyOS Sans SC**，英文标签和数字使用 **Monocraft v4.2.1**。字体通过本地 WOFF2 加载，不依赖 Google Fonts。HarmonyOS 提供 Medium 和 Bold 两个现成字重，正文使用 Medium；未修改或裁剪其字形。
+
+Monocraft 发布包原本提供 TTF/OTF，本工程用 fontTools 将 Regular TTF 转为 WOFF2，保留全字库、提示信息和许可证。原始 ZIP 与整套 TTF 保留在 `assets-sources/fonts/`，不复制到生产目录。需要重建时：
+
+```sh
+python -m pip install fonttools brotli
+python assets-sources/fonts/convert_monocraft.py
+```
+
+字体与素材的真实来源、许可见 [第三方来源](THIRD_PARTY_NOTICES.md)。

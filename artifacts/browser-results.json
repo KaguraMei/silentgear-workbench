@@ -1,12 +1,12 @@
 {
   "config": {
     "argv": [
-      "C:\\nvm4w\\nodejs\\node.exe",
-      "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\node_modules\\@playwright\\test\\cli.js",
+      "C:\\Users\\Ayano\\AppData\\Local\\Author Software\\nvm\\installs\\v22.23.3\\node.exe",
+      "D:\\silentgear-workbench\\node_modules\\@playwright\\test\\cli.js",
       "test"
     ],
-    "configFile": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\playwright.config.ts",
-    "rootDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/tests",
+    "configFile": "D:\\silentgear-workbench\\playwright.config.ts",
+    "rootDir": "D:/silentgear-workbench/tests",
     "failOnFlakyTests": false,
     "forbidOnly": false,
     "fullyParallel": false,
@@ -22,7 +22,7 @@
     "preserveOutput": "always",
     "projects": [
       {
-        "outputDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/test-results",
+        "outputDir": "D:/silentgear-workbench/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -30,7 +30,7 @@
         },
         "id": "desktop-chrome",
         "name": "desktop-chrome",
-        "testDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/tests",
+        "testDir": "D:/silentgear-workbench/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.ts"
@@ -38,7 +38,7 @@
         "timeout": 45000
       },
       {
-        "outputDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/test-results",
+        "outputDir": "D:/silentgear-workbench/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -46,7 +46,7 @@
         },
         "id": "mobile-chrome",
         "name": "mobile-chrome",
-        "testDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/tests",
+        "testDir": "D:/silentgear-workbench/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.ts"
@@ -54,7 +54,7 @@
         "timeout": 45000
       },
       {
-        "outputDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/test-results",
+        "outputDir": "D:/silentgear-workbench/test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
@@ -62,7 +62,7 @@
         },
         "id": "laptop-edge",
         "name": "laptop-edge",
-        "testDir": "C:/PCL/.minecraft/versions/All the Mods 9 - ATM9/sites/silentgear-workbench/tests",
+        "testDir": "D:/silentgear-workbench/tests",
         "testIgnore": [],
         "testMatch": [
           "**/*.spec.ts"
@@ -74,15 +74,15 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\test-results",
+        "outputDir": "D:\\silentgear-workbench\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
         "name": "desktop-chrome",
-        "testDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
-        "snapshotDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
+        "testDir": "D:\\silentgear-workbench\\tests",
+        "snapshotDir": "D:\\silentgear-workbench\\tests",
         "testIgnore": [],
         "testMatch": "**/*.spec.ts",
         "timeout": 45000,
@@ -103,15 +103,15 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\test-results",
+        "outputDir": "D:\\silentgear-workbench\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
         "name": "mobile-chrome",
-        "testDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
-        "snapshotDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
+        "testDir": "D:\\silentgear-workbench\\tests",
+        "snapshotDir": "D:\\silentgear-workbench\\tests",
         "testIgnore": [],
         "testMatch": "**/*.spec.ts",
         "timeout": 45000,
@@ -141,15 +141,15 @@
       {
         "grep": {},
         "grepInvert": null,
-        "outputDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\test-results",
+        "outputDir": "D:\\silentgear-workbench\\test-results",
         "repeatEach": 1,
         "retries": 0,
         "metadata": {
           "actualWorkers": 1
         },
         "name": "laptop-edge",
-        "testDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
-        "snapshotDir": "C:\\PCL\\.minecraft\\versions\\All the Mods 9 - ATM9\\sites\\silentgear-workbench\\tests",
+        "testDir": "D:\\silentgear-workbench\\tests",
+        "snapshotDir": "D:\\silentgear-workbench\\tests",
         "testIgnore": [],
         "testMatch": "**/*.spec.ts",
         "timeout": 45000,
@@ -199,6 +199,266 @@
   },
   "suites": [
     {
+      "title": "inspector.spec.ts",
+      "file": "inspector.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "local fonts, WebGL inspection, responsive layout and context fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chrome",
+              "projectName": "desktop-chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1665,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:20.350Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a233f56b9daa8e69892b-0517df54fb16b54d909b",
+          "file": "inspector.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "local fonts, WebGL inspection, responsive layout and context fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "mobile-chrome",
+              "projectName": "mobile-chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1970,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:28.298Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a233f56b9daa8e69892b-64dda4c05609d73054d2",
+          "file": "inspector.spec.ts",
+          "line": 4,
+          "column": 1
+        },
+        {
+          "title": "local fonts, WebGL inspection, responsive layout and context fallback",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "laptop-edge",
+              "projectName": "laptop-edge",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 1632,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:36.221Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "a233f56b9daa8e69892b-fd684568401ad608dc50",
+          "file": "inspector.spec.ts",
+          "line": 4,
+          "column": 1
+        }
+      ]
+    },
+    {
+      "title": "pages.spec.ts",
+      "file": "pages.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "GitHub Pages repository subpath resolves every local asset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "desktop-chrome",
+              "projectName": "desktop-chrome",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 630,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:22.256Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "9bb6bb2ed574bebb3c58-ee2ebfae8650dda608af",
+          "file": "pages.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "GitHub Pages repository subpath resolves every local asset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Static path check shared across browser targets.",
+                  "location": {
+                    "file": "D:\\silentgear-workbench\\tests\\pages.spec.ts",
+                    "line": 20,
+                    "column": 7
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "mobile-chrome",
+              "projectName": "mobile-chrome",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 158,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:30.487Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Static path check shared across browser targets.",
+                      "location": {
+                        "file": "D:\\silentgear-workbench\\tests\\pages.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "9bb6bb2ed574bebb3c58-2bbf1b924c1df7c03cfa",
+          "file": "pages.spec.ts",
+          "line": 19,
+          "column": 1
+        },
+        {
+          "title": "GitHub Pages repository subpath resolves every local asset",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 45000,
+              "annotations": [
+                {
+                  "type": "skip",
+                  "description": "Static path check shared across browser targets.",
+                  "location": {
+                    "file": "D:\\silentgear-workbench\\tests\\pages.spec.ts",
+                    "line": 20,
+                    "column": 7
+                  }
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "laptop-edge",
+              "projectName": "laptop-edge",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 0,
+                  "status": "skipped",
+                  "duration": 140,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-10-15T15:16:38.100Z",
+                  "annotations": [
+                    {
+                      "type": "skip",
+                      "description": "Static path check shared across browser targets.",
+                      "location": {
+                        "file": "D:\\silentgear-workbench\\tests\\pages.spec.ts",
+                        "line": 20,
+                        "column": 7
+                      }
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "9bb6bb2ed574bebb3c58-684bbdd2c4dab2ee1cdc",
+          "file": "pages.spec.ts",
+          "line": 19,
+          "column": 1
+        }
+      ]
+    },
+    {
       "title": "workbench.spec.ts",
       "file": "workbench.spec.ts",
       "column": 0,
@@ -220,12 +480,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4238,
+                  "duration": 1210,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:39.222Z",
+                  "startTime": "2026-10-15T15:16:22.934Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -254,12 +514,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2183,
+                  "duration": 1104,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:43.672Z",
+                  "startTime": "2026-10-15T15:16:24.150Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -288,12 +548,12 @@
                   "workerIndex": 0,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4157,
+                  "duration": 2396,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:45.860Z",
+                  "startTime": "2026-10-15T15:16:25.262Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -322,12 +582,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2444,
+                  "duration": 1430,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:50.580Z",
+                  "startTime": "2026-10-15T15:16:30.690Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -356,12 +616,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2469,
+                  "duration": 1151,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:53.216Z",
+                  "startTime": "2026-10-15T15:16:32.125Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -390,12 +650,12 @@
                   "workerIndex": 1,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 6195,
+                  "duration": 2337,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:10:55.691Z",
+                  "startTime": "2026-10-15T15:16:33.284Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -424,12 +684,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 3176,
+                  "duration": 1142,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:11:02.511Z",
+                  "startTime": "2026-10-15T15:16:38.293Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -458,12 +718,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 2526,
+                  "duration": 1067,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:11:05.898Z",
+                  "startTime": "2026-10-15T15:16:39.441Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -492,12 +752,12 @@
                   "workerIndex": 2,
                   "parallelIndex": 0,
                   "status": "passed",
-                  "duration": 4252,
+                  "duration": 2257,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2026-10-15T07:11:08.431Z",
+                  "startTime": "2026-10-15T15:16:40.514Z",
                   "annotations": [],
                   "attachments": []
                 }
@@ -515,10 +775,10 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-15T07:10:38.765Z",
-    "duration": 34282.174,
-    "expected": 9,
-    "skipped": 0,
+    "startTime": "2026-10-15T15:16:19.441Z",
+    "duration": 24071.494,
+    "expected": 13,
+    "skipped": 2,
     "unexpected": 0,
     "flaky": 0
   }
