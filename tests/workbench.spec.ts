@@ -1,0 +1,29 @@
+import {test,expect,type Page} from '@playwright/test';
+import E from '../src/engine.js';
+import {writeFileSync} from 'node:fs';
+async function canvasPainted(page:Page){await expect.poll(()=>page.locator('#gear-art').evaluate((c:HTMLCanvasElement)=>{const a=c.getContext('2d')!.getImageData(0,0,c.width,c.height).data;let n=0;for(let i=3;i<a.length;i+=4)if(a[i]>0)n++;return n;})).toBeGreaterThan(500);}
+test('configure, grade, compare, hover/tap, wear and reset',async({page,isMobile},info)=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));page.on('response',r=>{if(r.url().startsWith('http://127.0.0.1')&&r.status()>=400)errors.push(r.status()+' '+r.url());});
+ await page.goto('/');await expect(page.getByRole('heading',{level:1})).toHaveText('强化黑曜石剑');await canvasPainted(page);
+ await page.getByLabel('搜索兼容材料').fill('iron');await page.getByRole('button',{name:'装配铁',exact:true}).click();await expect(page.locator('[data-stat="attack_damage"]')).toHaveText('6点');
+ await page.getByRole('button',{name:'固定对比',exact:true}).click();await page.getByLabel('主体品级').selectOption('MAX');await expect(page.locator('[data-stat="attack_damage"]')).toHaveText('6.6点');await expect(page.locator('.metric').first()).toContainText('+0.6');
+ await page.getByLabel('主体星光充能').selectOption('3');await expect(page.locator('[data-stat="attack_damage"]')).toHaveText('9.6点');
+ const trait=page.locator('.trait-card').first();if(isMobile)await trait.tap();else await trait.hover();await expect(page.getByRole('tooltip')).toBeVisible();await expect(page.getByRole('tooltip')).toContainText('来源');await page.keyboard.press('Escape');
+ await page.getByRole('button',{name:'✧ 参考方案'}).click();await page.getByRole('button',{name:/黑曜锋刃/}).click();const fresh=await page.locator('[data-stat="attack_damage"]').textContent();await page.locator('#wear').fill('50');await expect(page.locator('[data-stat="attack_damage"]')).not.toHaveText(fresh!);
+ await page.getByRole('heading',{level:1}).scrollIntoViewIfNeeded();await page.mouse.move(0,0);await page.keyboard.press('Escape');await canvasPainted(page);await page.screenshot({path:`artifacts/${info.project.name}-configured.png`,fullPage:isMobile});
+ const dimensions=await page.evaluate(()=>({width:innerWidth,scroll:document.documentElement.scrollWidth,panels:[...document.querySelectorAll('.panel')].map(el=>{const r=el.getBoundingClientRect();return {x:r.x,y:r.y,right:r.right,bottom:r.bottom,w:r.width,h:r.height};})}));expect(dimensions.scroll).toBeLessThanOrEqual(dimensions.width);
+ if(!isMobile){const [tl,bl,tr,br]=dimensions.panels;expect(tl.x).toBe(16);expect(tl.y).toBe(16);expect(bl.x).toBe(16);expect(dimensions.width-tr.right).toBe(16);expect(tr.y).toBe(16);expect(dimensions.width-br.right).toBe(16);expect(tl.bottom).toBeLessThan(bl.y);expect(tr.bottom).toBeLessThan(br.y);}
+ await page.getByRole('button',{name:'↺ 重置'}).click();await expect(page.locator('[data-stat="attack_damage"]')).toHaveText('14点');await expect(page.locator('#wear')).toHaveValue('0');expect(errors).toEqual([]);
+});
+test('import, export, persistent config, share state, invalid input',async({page},info)=>{
+ await page.goto('/');const b=E.defaultBuild('helmet');b.parts.main.material='turtle';const input=page.locator('input[type=file]');await input.setInputFiles({name:'helmet.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(b))});await expect(page.getByRole('heading',{level:1})).toContainText('头盔');await expect(page.locator('.trait-list')).toContainText('海龟');
+ const downloadEvent=page.waitForEvent('download');await page.getByRole('button',{name:'↓ 导出'}).click();const download=await downloadEvent;expect(download.suggestedFilename()).toBe('silentgear-helmet.json');await download.saveAs(`artifacts/${info.project.name}-export.json`);
+ await page.reload();await expect(page.getByRole('heading',{level:1})).toContainText('头盔');await input.setInputFiles({name:'bad.json',mimeType:'application/json',buffer:Buffer.from('{bad')});await expect(page.locator('#toast')).toContainText('导入失败');await expect(page.getByRole('heading',{level:1})).toContainText('头盔');
+ const shared=E.defaultBuild('bow');shared.parts.main.material='diamond';await page.goto('/#build='+Buffer.from(JSON.stringify(shared)).toString('base64'));await expect(page.getByRole('heading',{level:1})).toHaveText('钻石弓');await expect(page.getByLabel('装备类型')).toHaveValue('bow');
+ await page.getByRole('button',{name:'计算范围与数据来源'}).click();await expect(page.getByRole('dialog')).toBeVisible();await page.getByRole('button',{name:'关闭',exact:true}).click();await expect(page.getByRole('dialog')).toHaveCount(0);
+});
+test('all 32 gear types, canvas and interaction timing',async({page},info)=>{
+ const errors:string[]=[];page.on('pageerror',e=>errors.push(e.message));await page.goto('/');const times:number[]=[];
+ for(const gear of E.gears){const b=E.defaultBuild(gear.id);const start=Date.now();await page.locator('input[type=file]').setInputFiles({name:'gear.json',mimeType:'application/json',buffer:Buffer.from(JSON.stringify(b))});await expect(page.getByLabel('装备类型')).toHaveValue(gear.id);await expect(page.locator('.metric-value').first()).not.toContainText('NaN');await canvasPainted(page);times.push(Date.now()-start);}
+ expect(errors).toEqual([]);const performance=await page.evaluate(()=>({resourceCount:performance.getEntriesByType('resource').length,canvas:[...document.querySelectorAll('canvas')].map(c=>({width:c.width,height:c.height})),domNodes:document.querySelectorAll('*').length}));writeFileSync(`artifacts/${info.project.name}-performance.json`,JSON.stringify({typesTested:times.length,interactionMedianMs:times.sort((a,b)=>a-b)[16],interactionMaxMs:Math.max(...times),...performance},null,2));
+});

@@ -1,0 +1,6 @@
+{
+  "name": "silentgear-workbench", "version": "1.0.0", "private": true, "type": "module",
+  "scripts": {"dev": "vite --host 127.0.0.1", "build": "tsc --noEmit && vite build", "preview": "vite preview --host 127.0.0.1", "typecheck": "tsc --noEmit", "test": "node --test tests/engine.test.mjs", "test:browser": "playwright test"},
+  "dependencies": {"react": "19.3.1", "react-dom": "19.3.1"},
+  "devDependencies": {"@types/react": "19.3.0", "@types/react-dom": "^19.2.0", "@vitejs/plugin-react": "6.1.2", "vite": "8.3.4", "typescript": "7.0.2", "@playwright/test": "^1.58.0"}
+}

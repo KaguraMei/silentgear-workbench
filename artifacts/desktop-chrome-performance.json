@@ -1,0 +1,17 @@
+{
+  "typesTested": 32,
+  "interactionMedianMs": 33,
+  "interactionMaxMs": 1980,
+  "resourceCount": 106,
+  "canvas": [
+    {
+      "width": 1440,
+      "height": 900
+    },
+    {
+      "width": 256,
+      "height": 256
+    }
+  ],
+  "domNodes": 761
+}

@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "gear": "helmet",
+  "wear": 0,
+  "parts": {
+    "main": {
+      "material": "turtle",
+      "grade": "NONE",
+      "star": 0
+    },
+    "tip": {
+      "material": null,
+      "grade": "NONE",
+      "star": 0
+    },
+    "lining": {
+      "material": null,
+      "grade": "NONE",
+      "star": 0
+    },
+    "coating": {
+      "material": null,
+      "grade": "NONE",
+      "star": 0
+    }
+  }
+}
