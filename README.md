@@ -89,6 +89,8 @@ npm run test:browser
 
 工作流只有手动触发入口，不会因推送自动发布；本地准备工作不会触发部署。也可以运行 `npm run build` 后自行托管 `dist/`。实际 GitHub 部署需要仓库开启 Pages。
 
+如果旧运行报 `Multiple artifacts named "github-pages"`，表示同一次运行存在多个同名发布包。工作流现在用运行 ID 和尝试次数命名发布包，并让部署步骤读取同一个名字，避免重跑时选中旧包。推送修复后，在工作流主页点击 **Run workflow** 新建运行；旧失败记录的 **Re-run jobs** 会沿用旧提交，无法读取这次修复。
+
 ## 字体与素材
 
 正文使用 **HarmonyOS Sans SC**，英文标签和数字使用 **Monocraft v4.2.1**。字体通过本地 WOFF2 加载，不依赖 Google Fonts。HarmonyOS 提供 Medium 和 Bold 两个现成字重，正文使用 Medium；现按 Unicode 分为界面常用字、材料词条字、扩展字形三组，浏览器只请求当前文字需要的组，保留原始全部字符覆盖。
