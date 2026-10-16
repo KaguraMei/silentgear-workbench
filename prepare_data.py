@@ -1,5 +1,5 @@
 from pathlib import Path
-import json,ast,zipfile,re,copy
+import json,ast,zipfile,re,copy,runpy
 
 HERE=Path(__file__).resolve().parent
 ROOT=HERE.parents[1]
@@ -61,5 +61,9 @@ with zipfile.ZipFile(ROOT/'mods/silent-gear-1.20.1-3.6.7.jar') as z:
             target=HERE/'public/textures'/n.split('/textures/item/')[1]
             target.parent.mkdir(parents=True,exist_ok=True);target.write_bytes(z.read(n))
 out['textures']=[p.relative_to(HERE/'public').as_posix() for p in (HERE/'public/textures').rglob('*.png')]
+translation_snapshot=HERE/'translations/silentgear.zh_cn.json'
+if translation_snapshot.exists():
+    apply=runpy.run_path(str(HERE/'scripts/extract-translations.py'))['apply_translations']
+    apply(out,json.loads(translation_snapshot.read_text(encoding='utf-8')))
 (HERE/'src/data.js').write_text('export default '+json.dumps(out,ensure_ascii=False,separators=(',',':'))+';\n',encoding='utf-8')
 print('Prepared',len(out['materials']),'materials;',len(out['traits']),'traits;',len(out['textures']),'textures')

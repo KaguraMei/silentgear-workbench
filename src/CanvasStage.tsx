@@ -2,13 +2,6 @@ import {useEffect, useRef, useState} from 'react';
 import * as THREE from 'three';
 import E, {type Build} from './engine.js';
 import {composeGear, makeGear, disposeMesh} from './gear-model';
-export function BackgroundCanvas(){
- const ref=useRef<HTMLCanvasElement>(null);
- useEffect(()=>{const canvas=ref.current!,ctx=canvas.getContext('2d')!;function draw(){const w=innerWidth,h=innerHeight,dpr=Math.min(devicePixelRatio,2);canvas.width=w*dpr;canvas.height=h*dpr;ctx.setTransform(dpr,0,0,dpr,0,0);ctx.fillStyle='#101714';ctx.fillRect(0,0,w,h);const gradient=ctx.createRadialGradient(w*.5,h*.43,20,w*.5,h*.43,w*.52);gradient.addColorStop(0,'#2a3e2b');gradient.addColorStop(.5,'#18261e');gradient.addColorStop(1,'#101714');ctx.fillStyle=gradient;ctx.fillRect(0,0,w,h);ctx.strokeStyle='#a9c9aa09';ctx.lineWidth=1;ctx.beginPath();for(let x=w%40;x<w;x+=40){ctx.moveTo(x,0);ctx.lineTo(x,h);}for(let y=h%40;y<h;y+=40){ctx.moveTo(0,y);ctx.lineTo(w,y);}ctx.stroke();ctx.fillStyle='#adc5ac35';for(let x=w%160;x<w;x+=160)for(let y=h%160;y<h;y+=160){ctx.fillRect(x-2,y,5,1);ctx.fillRect(x,y-2,1,5);}ctx.strokeStyle='#b4cea212';ctx.beginPath();ctx.moveTo(w/2,0);ctx.lineTo(w/2,h);ctx.stroke();}draw();window.addEventListener('resize',draw);return()=>window.removeEventListener('resize',draw);},[]);
- return <canvas id="world" ref={ref} aria-hidden="true"/>;
-}
-
-
 type Viewer = {setSprite(sprite: HTMLCanvasElement): void; clear(): void; reset(): void; zoom(amount: number): void; spin(value: boolean): void};
 
 export function GearArt({build}: {build: Build}) {
@@ -42,47 +35,21 @@ export function GearArt({build}: {build: Build}) {
     renderer.outputColorSpace = THREE.SRGBColorSpace;
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.3;
-    renderer.shadowMap.enabled = true;
+    renderer.shadowMap.enabled = false;
     renderer.shadowMap.type = THREE.PCFShadowMap;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(36, 1, .1, 30);
-    camera.position.set(0, .3, 6.3);
+    camera.position.set(0, .3, 5.8);
     camera.lookAt(0, -.08, 0);
     const pivot = new THREE.Group();
     scene.add(pivot);
     scene.add(new THREE.HemisphereLight('#e7e8de', '#25292c', 2.2));
     const key = new THREE.DirectionalLight('#fff0d1', 3.8);
     key.position.set(-3, 5, 5);
-    key.castShadow = true;
-    key.shadow.mapSize.set(512, 512);
-    key.shadow.camera.left = key.shadow.camera.bottom = -3;
-    key.shadow.camera.right = key.shadow.camera.top = 3;
-    key.shadow.normalBias = .025;
     scene.add(key);
     const rim = new THREE.DirectionalLight('#e0e8ba', 2.5);
     rim.position.set(4, 1, -3);
     scene.add(rim);
-    const pedestal = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.45, .13, 8), new THREE.MeshStandardMaterial({color: '#252c2e', roughness: .6, metalness: .45}));
-    pedestal.position.y = -1.62;
-    pedestal.receiveShadow = true;
-    scene.add(pedestal);
-    const top = new THREE.Mesh(new THREE.CylinderGeometry(1.22, 1.22, .025, 8), new THREE.MeshStandardMaterial({color: '#434d4d', roughness: .78, metalness: .38}));
-    top.position.y = -1.54;
-    top.receiveShadow = true;
-    scene.add(top);
-    const trim = new THREE.Mesh(new THREE.TorusGeometry(1.32, .012, 4, 8), new THREE.MeshStandardMaterial({color: '#d2de8c', roughness: .42, metalness: .55}));
-    trim.rotation.x = Math.PI / 2;
-    trim.position.y = -1.54;
-    scene.add(trim);
-    // Repeated recessed fasteners make the inspection plinth read as machined metal.
-    const fasteners = new THREE.InstancedMesh(new THREE.CylinderGeometry(.034, .034, .012, 6), new THREE.MeshStandardMaterial({color: '#171e20', roughness: .5, metalness: .65}), 8);
-    const boltTransform = new THREE.Matrix4();
-    for (let i = 0; i < 8; i++) {
-      const angle = (i + .5) * Math.PI / 4;
-      boltTransform.makeTranslation(Math.cos(angle) * 1.12, -1.518, Math.sin(angle) * 1.12);
-      fasteners.setMatrixAt(i, boltTransform);
-    }
-    scene.add(fasteners);
     let mesh: THREE.Mesh | null = null, frame = 0, spinning = false, stopped = false, previousTime = 0;
     let rotationX = -.08, rotationY = -.32, zoom = 1;
     let activePointer: number | null = null, lastX = 0, lastY = 0;
@@ -137,7 +104,7 @@ export function GearArt({build}: {build: Build}) {
       renderer.setSize(width, height, false);
       camera.aspect = width / height;
       // A tall viewport keeps the entire model inside the narrower horizontal field of view.
-      camera.position.z = camera.aspect < .9 ? 6.3 * .9 / camera.aspect : 6.3;
+      camera.position.z = camera.aspect < .9 ? 5.8 * .9 / camera.aspect : 5.8;
       draw();
     };
     const down = (event: PointerEvent) => {
@@ -202,7 +169,6 @@ export function GearArt({build}: {build: Build}) {
       canvas.removeEventListener('webglcontextlost', contextLost);
       document.removeEventListener('visibilitychange', startAnimation);
       if (mesh) disposeMesh(mesh);
-      for (const item of [pedestal, top, trim, fasteners]) disposeMesh(item);
       key.shadow.map?.dispose();
       renderer.dispose();
     };

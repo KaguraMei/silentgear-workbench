@@ -6,3 +6,5 @@ test-results/
 playwright-report/
 *.local
 .font-tools/
+assets-sources/fonts/.cache/
+**/__pycache__/

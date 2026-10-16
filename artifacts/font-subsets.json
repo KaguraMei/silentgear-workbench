@@ -1,0 +1,44 @@
+[
+  {
+    "weight": "Medium",
+    "group": "core",
+    "characters": 622,
+    "bytes": 71536,
+    "sourceBytes": 4440632
+  },
+  {
+    "weight": "Medium",
+    "group": "catalog",
+    "characters": 349,
+    "bytes": 46936,
+    "sourceBytes": 4440632
+  },
+  {
+    "weight": "Medium",
+    "group": "extended",
+    "characters": 28092,
+    "bytes": 4202616,
+    "sourceBytes": 4440632
+  },
+  {
+    "weight": "Bold",
+    "group": "core",
+    "characters": 622,
+    "bytes": 71728,
+    "sourceBytes": 4475560
+  },
+  {
+    "weight": "Bold",
+    "group": "catalog",
+    "characters": 349,
+    "bytes": 47196,
+    "sourceBytes": 4475560
+  },
+  {
+    "weight": "Bold",
+    "group": "extended",
+    "characters": 28092,
+    "bytes": 4244192,
+    "sourceBytes": 4475560
+  }
+]

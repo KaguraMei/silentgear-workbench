@@ -4,8 +4,8 @@ Uses convert_one from the user's tff2woff2 project, copied beside this file.
 Run with Python + fonttools + brotli; generated files are committed for normal builds.
 """
 from pathlib import Path
-from collections import Counter
 import json
+import hashlib
 from fontTools.ttLib import TTFont
 from ttf_to_web import convert_one
 
@@ -41,9 +41,22 @@ def main():
         for group, points in groups.items():
             output = ROOT / 'public/fonts' / group
             output.mkdir(parents=True, exist_ok=True)
-            convert_one(source, output, True, False, ''.join(map(chr, sorted(points))))
             path = output / filename
+            fingerprint = hashlib.sha256(source.read_bytes() + ranges(points).encode()).hexdigest()
+            cache = HERE / '.cache'
+            cache.mkdir(exist_ok=True)
+            stamp = cache / f'{weight}-{group}.json'
+            if not path.exists() or not stamp.exists() or json.loads(stamp.read_text()) != fingerprint:
+                convert_one(source, output, True, False, ''.join(map(chr, sorted(points))))
+                stamp.write_text(json.dumps(fingerprint), encoding='utf-8')
             with TTFont(path) as font:
+                # FontTools retains some cmap aliases through layout closure (e.g. ≥).
+                # Keep glyphs intact, but make the CSS unicode partitions truly disjoint.
+                if set(font.getBestCmap()) - points:
+                    for table in font['cmap'].tables:
+                        if table.isUnicode() and hasattr(table, 'cmap'):
+                            table.cmap = {cp: glyph for cp, glyph in table.cmap.items() if cp in points}
+                    font.save(path)
                 subset_coverage = set(font.getBestCmap())
             assert subset_coverage == points, f'{weight}/{group}: unexpected cmap'
             assert not actual & subset_coverage, 'Subsets must not overlap'

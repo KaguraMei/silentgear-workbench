@@ -1,0 +1,1116 @@
+{
+  "version": "3.6.7",
+  "precedence": "archive languages, then kubejs/assets; duplicate JSON keys use the final value",
+  "sources": [
+    {
+      "id": "mods/silent-gear-1.20.1-3.6.7.jar!assets/silentgear/lang/zh_cn.json",
+      "sha256": "7594b937b8437f3e0bce7d83ab8afb1642f2ce65fa95118eb9c62bd86ddbded4",
+      "keys": 194,
+      "active": true
+    },
+    {
+      "id": "mods/assets/silentgear/lang/zh_cn.json",
+      "sha256": "7594b937b8437f3e0bce7d83ab8afb1642f2ce65fa95118eb9c62bd86ddbded4",
+      "keys": 194,
+      "active": false
+    },
+    {
+      "id": "kubejs/assets/allthemodium/lang/zh_cn.json",
+      "sha256": "91ec08896ff5f5ffd3e4dd3217528accd3ad872bfe2a528177378ffa71aa0646",
+      "keys": 6,
+      "active": true
+    },
+    {
+      "id": "kubejs/assets/silentgear/lang/zh_cn.json",
+      "sha256": "76296a71bd92a106a94138e1690738d71d7f701af0a1f5700f34e92cb3c33193",
+      "keys": 265,
+      "active": true
+    }
+  ],
+  "entries": {
+    "material.silentgear.aluminum": {
+      "text": "铝",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.aluminum_steel": {
+      "text": "铝钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.amethyst": {
+      "text": "紫晶",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.azure_electrum": {
+      "text": "蔚蓝琥珀金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.azure_silver": {
+      "text": "蔚蓝银",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.basalt": {
+      "text": "玄武岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.bismuth": {
+      "text": "铋",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.bismuth_brass": {
+      "text": "铋黄铜",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.bismuth_steel": {
+      "text": "铋钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.blackstone": {
+      "text": "黑石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.blaze_gold": {
+      "text": "烈焰金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.bone": {
+      "text": "骨",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.brass": {
+      "text": "黄铜",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.bronze": {
+      "text": "青铜",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.compressed_iron": {
+      "text": "致密铁",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.copper": {
+      "text": "铜",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.crimson_iron": {
+      "text": "深红铁",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.crimson_steel": {
+      "text": "深红钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.diamond": {
+      "text": "钻石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.electrum": {
+      "text": "琥珀金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.emerald": {
+      "text": "绿宝石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.end_stone": {
+      "text": "末地石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.enderium": {
+      "text": "末影",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.example": {
+      "text": "示例",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.feather": {
+      "text": "羽毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.flax": {
+      "text": "亚麻",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.flint": {
+      "text": "燧石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.glowstone": {
+      "text": "萤石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.gold": {
+      "text": "金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.invar": {
+      "text": "殷钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.iron": {
+      "text": "铁",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.lapis_lazuli": {
+      "text": "青金石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.lead": {
+      "text": "铅",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.leather": {
+      "text": "皮革",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.leaves": {
+      "text": "树叶",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.lumium": {
+      "text": "流明",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.netherite": {
+      "text": "下界合金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.netherrack": {
+      "text": "下界岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.netherwood": {
+      "text": "下界木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.nickel": {
+      "text": "镍",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.obsidian": {
+      "text": "黑曜石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.osmium": {
+      "text": "锇",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.platinum": {
+      "text": "铂",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.prismarine": {
+      "text": "海晶石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.quartz": {
+      "text": "石英",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.redstone": {
+      "text": "红石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.redstone_alloy": {
+      "text": "红石合金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.refined_iron": {
+      "text": "精炼铁",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.refined_obsidian": {
+      "text": "强化黑曜石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.sandstone": {
+      "text": "砂岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.sandstone.red": {
+      "text": "红砂岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.signalum": {
+      "text": "信素",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.silver": {
+      "text": "银",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.sinew": {
+      "text": "筋",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.steel": {
+      "text": "钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.stone": {
+      "text": "石头",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.stone.andesite": {
+      "text": "安山岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.stone.diorite": {
+      "text": "闪长岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.stone.granite": {
+      "text": "花岗岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.string": {
+      "text": "线",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta": {
+      "text": "陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.black": {
+      "text": "黑色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.blue": {
+      "text": "蓝色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.brown": {
+      "text": "棕色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.cyan": {
+      "text": "青色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.gray": {
+      "text": "灰色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.green": {
+      "text": "绿色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.light_blue": {
+      "text": "淡蓝色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.light_gray": {
+      "text": "淡灰色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.lime": {
+      "text": "黄绿色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.magenta": {
+      "text": "品红色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.orange": {
+      "text": "橙色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.pink": {
+      "text": "粉色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.purple": {
+      "text": "紫色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.red": {
+      "text": "红色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.white": {
+      "text": "白色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.terracotta.yellow": {
+      "text": "黄色陶瓦",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.tin": {
+      "text": "锡",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.titanium": {
+      "text": "钛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.uranium": {
+      "text": "铀",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood": {
+      "text": "木材",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.acacia": {
+      "text": "金合欢木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.birch": {
+      "text": "白桦木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.crimson": {
+      "text": "深红木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.dark_oak": {
+      "text": "深色橡木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.jungle": {
+      "text": "从林木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.oak": {
+      "text": "橡木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.rough": {
+      "text": "粗木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.spruce": {
+      "text": "云杉木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wood.warped": {
+      "text": "弯木",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool": {
+      "text": "羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.black": {
+      "text": "黑色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.blue": {
+      "text": "蓝色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.brown": {
+      "text": "棕色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.cyan": {
+      "text": "青色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.gray": {
+      "text": "灰色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.green": {
+      "text": "绿色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.light_blue": {
+      "text": "淡蓝色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.light_gray": {
+      "text": "淡灰色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.lime": {
+      "text": "黄绿色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.magenta": {
+      "text": "品红色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.orange": {
+      "text": "橙色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.pink": {
+      "text": "粉色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.purple": {
+      "text": "紫色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.red": {
+      "text": "红色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.white": {
+      "text": "白色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.wool.yellow": {
+      "text": "黄色羊毛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.zinc": {
+      "text": "锌",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.accelerate": {
+      "text": "加速",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.accelerate.desc": {
+      "text": "受损时获得采掘速度，近战攻击速度和远程速度",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.adamant": {
+      "text": "坚硬",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.adamant.desc": {
+      "text": "护甲增加伤害抗性，工具对基础生命值超过10颗心脏的怪物造成更多伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.ancient": {
+      "text": "远古",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.ancient.desc": {
+      "text": "增加方块与怪物的经验掉落",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.aquatic": {
+      "text": "水栖",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.aquatic.desc": {
+      "text": "全套盔甲能给予水下呼吸，对水生生物造成更多伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.brilliant": {
+      "text": "辉煌",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.brilliant.desc": {
+      "text": "闪闪发光！猪灵喜欢。",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.brittle": {
+      "text": "易碎",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.brittle.desc": {
+      "text": "装备有时会受到额外的损伤（与“韧性”相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bulky": {
+      "text": "笨重",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bulky.desc": {
+      "text": "未完成，未测试",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.chilled": {
+      "text": "冰冻",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.chilled.desc": {
+      "text": "对下界和火焰免疫怪物造成更多伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.chipping": {
+      "text": "剥落",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.chipping.desc": {
+      "text": "当装备受损时,降低护甲或提升采掘速度",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.confetti": {
+      "text": "五彩纸屑!",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.confetti.desc": {
+      "text": "我喜欢爆炸",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crude": {
+      "text": "粗糙",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crude.desc": {
+      "text": "减少协同作用（与协同增强相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crushing": {
+      "text": "粉碎",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crushing.desc": {
+      "text": "装备损坏时增加护甲或降低攻击伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cursed": {
+      "text": "诅咒",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cursed.desc": {
+      "text": "降低幸运值，多么不幸啊",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.displayFormat": {
+      "text": "%1$s %2$s",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.eroded": {
+      "text": "侵蚀",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.eroded.desc": {
+      "text": "当装备受损时,增加采掘速度并且减少近战攻击伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.fiery": {
+      "text": "炽烈",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.fiery.desc": {
+      "text": "在适当的装备上增加火焰附加或火矢附魔",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flame_ward": {
+      "text": "火焰保护",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flame_ward.desc": {
+      "text": "在装备上提供抗火（仅全套）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flammable": {
+      "text": "可燃",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flammable.desc": {
+      "text": "着火时会损坏，可用作燃料",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flammable.itemDestroyed": {
+      "text": "你的%s被烧掉了",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flexible": {
+      "text": "柔韧",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.flexible.desc": {
+      "text": "装备有时会受到更少的损伤（与“易碎”相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.hard": {
+      "text": "坚固",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.hard.desc": {
+      "text": "当装备受损时，增加挖掘速度或降低远程伤害（与“柔软”相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.heavy": {
+      "text": "沉重",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.heavy.desc": {
+      "text": "护甲降低移动速度",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.holy": {
+      "text": "神圣",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.holy.desc": {
+      "text": "对亡灵造成额外伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.indestructible": {
+      "text": "坚不可摧",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.indestructible.desc": {
+      "text": "阻止耐久损失",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.jabberwocky": {
+      "text": "无聊的话",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.jabberwocky.desc": {
+      "text": "’斯布里格，和那些滑溜的玩具/在瓦布里旋转和摇摆",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.jagged": {
+      "text": "锯齿",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.jagged.desc": {
+      "text": "当工具受损时，增加近战伤害，减少远程伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.light": {
+      "text": "光辉",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.light.desc": {
+      "text": "工具在光照下可以获得很大的采掘速度提升",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.lucky": {
+      "text": "幸运",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.lucky.desc": {
+      "text": "握着时增加幸运",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.lustrous": {
+      "text": "光辉",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.lustrous.desc": {
+      "text": "工具在光照下可以获得很大的挖掘速度提升",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.magmatic": {
+      "text": "熔岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.magmatic.desc": {
+      "text": "自动熔炼",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.magnetic": {
+      "text": "磁力",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.magnetic.desc": {
+      "text": "吸引附近的物品",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.malleable": {
+      "text": "韧性",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.malleable.desc": {
+      "text": "装备有时会受到更少的损伤(与“易碎”相抵消)",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.moonwalker": {
+      "text": "月球行走",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.moonwalker.desc": {
+      "text": "我不相信重力！",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.multi_break": {
+      "text": "多重破坏",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.multi_break.desc": {
+      "text": "未完成，无代码",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.organic": {
+      "text": "有机",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.organic.desc": {
+      "text": "获得附魔效果，但当物品损坏时失去魔法伤害",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.racker": {
+      "text": "岩石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.racker.desc": {
+      "text": "消耗耐久以放置下界岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.refractive": {
+      "text": "折射",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.refractive.desc": {
+      "text": "使用时放置幻光",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.rustic": {
+      "text": "淳朴",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.rustic.desc": {
+      "text": "提高协同效应（少于100%生效）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.silky": {
+      "text": "丝滑",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.silky.desc": {
+      "text": "为采掘工具添加精准采集附魔",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.soft": {
+      "text": "柔软",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.soft.desc": {
+      "text": "当工具受损时，降低采掘速度（与“坚固”相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.spoon": {
+      "text": "勺子",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.spoon.desc": {
+      "text": "镐子可以挖掘泥土",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.stellar": {
+      "text": "恒星",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.stellar.desc": {
+      "text": "护甲给予速度和跳跃提升，物品会慢慢自我修复",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.synergistic": {
+      "text": "协同作用",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.synergistic.desc": {
+      "text": "装备获得协同加成（如果基础值大于100%）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.terminus": {
+      "text": "终端",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.terminus.desc": {
+      "text": "使用时创造和放置石头",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.allthemodium": {
+      "text": "ATM",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.vibranium": {
+      "text": "振金",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.vibranium_allthemodium": {
+      "text": "振金-ATM合金",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.unobtainium_allthemodium": {
+      "text": "难得素-ATM合金",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.unobtainium_vibranium": {
+      "text": "难得素-振金合金",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.unobtainium": {
+      "text": "难得素",
+      "source": "kubejs/assets/allthemodium/lang/zh_cn.json"
+    },
+    "material.silentgear.bamboo": {
+      "text": "竹",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.blaze_rod": {
+      "text": "烈焰棒",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.dimerald": {
+      "text": "金刚绿宝石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.end_rod": {
+      "text": "末地烛",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.fine_silk": {
+      "text": "细丝",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.fine_silk_cloth": {
+      "text": "细丝织布",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.fluffy_string": {
+      "text": "毛绒线",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.high_carbon_steel": {
+      "text": "高碳钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.hybrid_gem": {
+      "text": "混合宝石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.metal_alloy": {
+      "text": "金属合金",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.paper": {
+      "text": "纸",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.phantom_membrane": {
+      "text": "幻翼膜",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.refined_glowstone": {
+      "text": "强化荧石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.slime": {
+      "text": "黏液",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.turtle": {
+      "text": "海龟壳",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.tyrian_steel": {
+      "text": "提尔钢",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "material.silentgear.vine": {
+      "text": "藤蔓",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bastion": {
+      "text": "堡垒",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bastion.desc": {
+      "text": "提供额外护甲值",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bending": {
+      "text": "弯折",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bending.desc": {
+      "text": "装备有几率增加耐久度消耗（与“柔韧”相抵消）",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bounce": {
+      "text": "反弹",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.bounce.desc": {
+      "text": "靴子：免疫摔落伤害；盔甲：弹开攻击者",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crackler": {
+      "text": "烧石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.crackler.desc": {
+      "text": "以耐久度为代价放置玄武岩",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cure_poison": {
+      "text": "解毒",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cure_poison.desc": {
+      "text": "装备时解除中毒效果",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cure_wither": {
+      "text": "唤生",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.cure_wither.desc": {
+      "text": "装备时解除凋零效果",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.fireproof": {
+      "text": "防火",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.fireproof.desc": {
+      "text": "掉落到火焰或熔岩中时不会被摧毁",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.floatstoner": {
+      "text": "浮石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.floatstoner.desc": {
+      "text": "使用时以少量耐久度为代价制造并放置末地石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.gold_digger": {
+      "text": "掘金者",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.gold_digger.desc": {
+      "text": "有概率在采掘时增加粒掉落量",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.greedy": {
+      "text": "贪婪",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.greedy.desc": {
+      "text": "提高矿石开采速度",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.ignite": {
+      "text": "点燃",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.ignite.desc": {
+      "text": "以少量耐久度为代价点燃方块",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.imperial": {
+      "text": "帝国宝藏",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.imperial.desc": {
+      "text": "采矿时有几率提升宝石掉落数量",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.kitty_vision": {
+      "text": "猫眼",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.kitty_vision.desc": {
+      "text": "装备于头盔栏或Curios饰品栏时提供夜视效果",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.lucky.desc.long": {
+      "text": "“幸运”是一种原版中提升运气的状态效果，在某些情况下会影响箱子战利品产出，与“时运”魔咒毫无干系！“幸运”无法影响矿物出产！",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.mighty": {
+      "text": "超凡",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.mighty.desc": {
+      "text": "提供力量和/或急迫增益，增益强度与特性等级成正比",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.reach": {
+      "text": "长臂",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.reach.desc": {
+      "text": "提升触及范围",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.red_card": {
+      "text": "红牌",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.renew": {
+      "text": "复生",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.renew.desc": {
+      "text": "随时间推移缓慢修复装备",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.road_maker": {
+      "text": "造路",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.road_maker.desc": {
+      "text": "将泥土类方块转化为土径",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.sharp": {
+      "text": "锋利",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.sharp.desc": {
+      "text": "工具受损时获得采掘速度与攻击速度增益",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.snow_walker": {
+      "text": "雪地行者",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.snow_walker.desc": {
+      "text": "在细雪上行走不会陷进去",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.sturdy": {
+      "text": "坚实",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.sturdy.desc": {
+      "text": "装备时常会削减自身所收到的损伤",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.swift_swim": {
+      "text": "速泳",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.swift_swim.desc": {
+      "text": "提升游泳速度",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.turtle": {
+      "text": "龟息",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.turtle.desc": {
+      "text": "延长屏息时间",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.venom": {
+      "text": "毒液",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.venom.desc": {
+      "text": "攻击时对目标施加中毒效果",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.void_ward": {
+      "text": "虚空庇佑",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.void_ward.desc": {
+      "text": "拯救坠入虚空的穿戴者",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.vulcan": {
+      "text": "火匠",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.vulcan.desc": {
+      "text": "以大量耐久度为代价放置黑曜石",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.widen": {
+      "text": "拓宽",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    },
+    "trait.silentgear.widen.desc": {
+      "text": "提升锤与开掘铲的作用范围",
+      "source": "kubejs/assets/silentgear/lang/zh_cn.json"
+    }
+  }
+}

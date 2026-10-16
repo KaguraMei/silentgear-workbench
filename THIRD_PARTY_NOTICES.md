@@ -11,7 +11,7 @@
 
 本软件使用 **HarmonyOS Sans Fonts**。版权归 Huawei Device Co., Ltd. 所有（Copyright 2021）。许可全文随网站发布于 [HarmonyOS Sans Fonts License Agreement](public/fonts/licenses/HarmonyOS-Sans-LICENSE.txt)。
 
-`public/fonts/HarmonyOS_Sans_SC_Medium.woff2` 与 `HarmonyOS_Sans_SC_Bold.woff2` 为本机已有 WOFF2 的原样副本，实际来源为 `E:\Endfield Game\sdkresources\font\`。用户提到的工程字体目录在本机不存在，因此使用本机现成的同款字体。命名表确认为 HarmonyOS Sans SC，版本 1.0，版权为 Huawei Device Co., Ltd.；未重新转制、裁剪或修改。Medium 用于正文，Bold 用于较粗标题。字体仅随本软件分发，不单独销售。官方字体设计资源：[Huawei Developers](https://developer.huawei.com/consumer/cn/design/resource/)。
+`assets-sources/fonts/originals/HarmonyOS_Sans_SC_Medium.woff2` 与 `HarmonyOS_Sans_SC_Bold.woff2` 保留本机已有 WOFF2 的原始副本，实际来源为 `E:\Endfield Game\sdkresources\font\`。用户提到的工程字体目录在本机不存在，因此使用本机现成的同款字体。命名表确认为 HarmonyOS Sans SC，版本 1.0，版权为 Huawei Device Co., Ltd.；网站分发版本使用 fontTools 按 Unicode 分组导出 WOFF2，并保留全部源字符覆盖；原始副本、版权与许可文件继续留存。Medium 用于正文，Bold 用于较粗标题。字体仅随本软件分发，不单独销售。官方字体设计资源：[Huawei Developers](https://developer.huawei.com/consumer/cn/design/resource/)。
 
 ## Monocraft
 
@@ -26,3 +26,5 @@
 `public/decor/` 的刻度圆、HUD 弧线和等高线由用户指定的 [Rahoo 素材生成器](https://rahoo.online/) 导出，调整了配色与裁切区域。参数、原始导出与使用说明见 [素材来源](public/decor/SOURCES.md)。未使用站点界面截图作为页面素材。
 
 Three.js 使用 MIT 许可证，随 npm 依赖分发。
+
+2026-10-16：网页额外显示用户提供 ATM9 汉化补丁中的词条原文，来源与语言键核查见 `artifacts/translation-audit.md`。字体生成脚本复用用户本地 `tff2woff2/ttf_to_web.py` 中的转换逻辑。

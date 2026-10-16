@@ -4,6 +4,9 @@
 
 本文件完整收录本地 **128 个材料定义、70 个词条定义**，并解析木材、石材、羊毛、陶瓦的父材料继承。数值来自安装包，不套用新版或其他整合包的数据。另一份文档见 [高伤害武器与防具](2026-10-14_ATM9_高伤害武器与防具.md)。
 
+<!-- translation-audit -->
+汉化核对：2026-10-16，采用用户提供的 ATM9 汉化补丁中 Silent Gear 3.6.7 JAR 与 KubeJS 语言资源；游戏译文与计算说明分开列出，按完整语言键核对。
+
 ## 先看这几条
 
 - **材料值不是成品面板值**。主体、部件模板、手柄、尖端、握把、涂层、材料品级和协同共同决定装备属性。
@@ -1914,6 +1917,12 @@
 
 ### 词条：加速 `accelerate`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：受损时获得采掘速度，近战攻击速度和远程速度
+
+语言键：`trait.silentgear.accelerate.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，采掘速度、攻击速度和远程速度越高。
 
 装备限制：装备类型=tool。
@@ -1929,6 +1938,12 @@
 材料来源：蔚蓝琥珀金 `azure_electrum`／主体；蔚蓝琥珀金 `azure_electrum`／手柄／杆；细丝织布 `fine_silk_cloth`／握把。
 
 ### 词条：坚硬 `adamant`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：护甲增加伤害抗性，工具对基础生命值超过10颗心脏的怪物造成更多伤害
+
+语言键：`trait.silentgear.adamant.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 防具提供抗性提升；说明还标注对基础生命大于20点的生物有额外伤害。防具药水强度按件数计算。
 
@@ -1957,6 +1972,12 @@
 
 ### 词条：远古 `ancient`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：增加方块与怪物的经验掉落
+
+语言键：`trait.silentgear.ancient.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 增加挖矿及击杀获得的经验；不是时运或抢夺。
 
 装备限制：装备类型=tool。
@@ -1964,6 +1985,12 @@
 材料来源：金刚绿宝石 `dimerald`／手柄／杆；末地石 `end_stone`／主体；末地石 `end_stone`／手柄／杆；幻翼膜 `phantom_membrane`／握把；石头 `stone`／主体。
 
 ### 词条：水栖 `aquatic`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：全套盔甲能给予水下呼吸，对水生生物造成更多伤害
+
+语言键：`trait.silentgear.aquatic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 完整套装提供水下呼吸；说明还标注对水生生物的额外伤害。
 
@@ -1988,6 +2015,12 @@
 材料来源：铅 `lead`／主体；海晶石 `prismarine`／涂层。
 
 ### 词条：堡垒 `bastion`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：提供额外护甲值
+
+语言键：`trait.silentgear.bastion.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 给护甲／饰物增加原版护甲属性。
 
@@ -2019,6 +2052,12 @@
 
 ### 词条：弯折 `bending`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：装备有几率增加耐久度消耗（与“柔韧”相抵消）
+
+语言键：`trait.silentgear.bending.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 提示文本说可能额外耗耐久，但本地JSON的 effect_scale=-1 与柔韧相同，实际参数表示触发时减少1点耐久损耗。这是数据与提示冲突，不能仅按中文判断。
 
 抵消对象：`silentgear:flexible`。
@@ -2036,6 +2075,12 @@
 
 ### 词条：反弹 `bounce`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：靴子：免疫摔落伤害；盔甲：弹开攻击者
+
+语言键：`trait.silentgear.bounce.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 鞋子免除摔落伤害；防具可击退攻击者。
 
 装备限制：装备类型=armor。
@@ -2044,11 +2089,23 @@
 
 ### 词条：辉煌 `brilliant`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：闪闪发光！猪灵喜欢。
+
+语言键：`trait.silentgear.brilliant.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 使装备具备猪灵认可的金质特性，不是增加亮度或伤害。
 
 材料来源：烈焰金 `blaze_gold`／主体；烈焰金 `blaze_gold`／涂层；金 `gold`／主体；金 `gold`／涂层。
 
 ### 词条：易碎 `brittle`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：装备有时会受到额外的损伤（与“韧性”相抵消）
+
+语言键：`trait.silentgear.brittle.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 触发时额外损失1点耐久；与可锻等词条抵消。
 
@@ -2067,6 +2124,12 @@
 
 ### 词条：笨重 `bulky`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：未完成，未测试
+
+语言键：`trait.silentgear.bulky.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 已有攻速降低参数，随耐久损失增加；语言文件仍写未测试，不推荐作为可靠配装增益。
 
 装备限制：装备类型=tool。
@@ -2080,6 +2143,12 @@
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：冰冻 `chilled`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：对下界和火焰免疫怪物造成更多伤害
+
+语言键：`trait.silentgear.chilled.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 对下界或免疫火焰的合适目标额外造成寒冷类型伤害。
 
@@ -2098,6 +2167,12 @@
 
 ### 词条：剥落 `chipping`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：当装备受损时,降低护甲或提升采掘速度
+
+语言键：`trait.silentgear.chipping.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，采掘速度越高，防具护甲越低。
 
 下列变化量还要乘词条等级；`factor_damage=true` 再乘已损失耐久比例，`factor_value=true` 再乘该项当前值。
@@ -2111,6 +2186,12 @@
 
 ### 词条：五彩纸屑! `confetti`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：我喜欢爆炸
+
+语言键：`trait.silentgear.confetti.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 玩家击杀生物且任一手持有该词条时，在被击杀者位置生成3枚随机烟花。是庆祝／烟花效果，不能当作固定近战增伤。
 
 装备限制：装备类型=weapon。
@@ -2118,6 +2199,12 @@
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：烧石 `crackler`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：以耐久度为代价放置玄武岩
+
+语言键：`trait.silentgear.crackler.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 使用时消耗耐久放置玄武岩。
 
@@ -2140,6 +2227,12 @@
 
 ### 词条：粗糙 `crude`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：减少协同作用（与协同增强相抵消）
+
+语言键：`trait.silentgear.crude.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 降低协同效果；与朴实、协同增效存在抵消关系。
 
 抵消对象：`silentgear:rustic`, `silentgear:synergistic`。
@@ -2156,6 +2249,12 @@
 
 ### 词条：粉碎 `crushing`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：装备损坏时增加护甲或降低攻击伤害
+
+语言键：`trait.silentgear.crushing.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，护甲上升、近战伤害下降。
 
 下列变化量还要乘词条等级；`factor_damage=true` 再乘已损失耐久比例，`factor_value=true` 再乘该项当前值。
@@ -2168,6 +2267,12 @@
 材料来源：黑曜石 `obsidian`／主体；石英 `quartz`／主体；石头 `stone`／手柄／杆；陶瓦 `terracotta`／手柄／杆。
 
 ### 词条：解毒 `cure_poison`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：装备时解除中毒效果
+
+语言键：`trait.silentgear.cure_poison.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 装备时移除中毒状态。
 
@@ -2185,6 +2290,12 @@
 
 ### 词条：唤生 `cure_wither`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：装备时解除凋零效果
+
+语言键：`trait.silentgear.cure_wither.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 装备时移除凋零状态。
 
 本地精确参数（数组按等级／件数顺序；`amplifier=0`表示药水I级）：
@@ -2200,6 +2311,12 @@
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：诅咒 `cursed`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：降低幸运值，多么不幸啊
+
+语言键：`trait.silentgear.cursed.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 降低原版幸运属性；不是降低武器伤害或附魔等级。
 
@@ -2233,6 +2350,12 @@
 
 ### 词条：侵蚀 `eroded`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：当装备受损时,增加采掘速度并且减少近战攻击伤害
+
+语言键：`trait.silentgear.eroded.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，采掘速度增加、近战伤害减少。
 
 装备限制：装备类型=tool。
@@ -2249,6 +2372,12 @@
 材料来源：下界岩 `netherrack`／主体；下界岩 `netherrack`／手柄／杆；红石合金 `redstone_alloy`／主体。
 
 ### 词条：炽烈 `fiery`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：在适当的装备上增加火焰附加或火矢附魔
+
+语言键：`trait.silentgear.fiery.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 近战武器获得火焰附加，远程武器获得火矢；这是附魔效果，不是独立固定额外伤害。
 
@@ -2284,11 +2413,23 @@
 
 ### 词条：防火 `fireproof`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：掉落到火焰或熔岩中时不会被摧毁
+
+语言键：`trait.silentgear.fireproof.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 掉落的装备物品不会被火／熔岩烧毁；不等于穿戴者免疫火焰。
 
 材料来源：下界合金 `netherite`／涂层。
 
 ### 词条：火焰保护 `flame_ward`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：在装备上提供抗火（仅全套）
+
+语言键：`trait.silentgear.flame_ward.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 全套有效防具提供抗火，并覆盖易燃；也有物品防火效果。
 
@@ -2318,11 +2459,23 @@
 
 ### 词条：可燃 `flammable`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：着火时会损坏，可用作燃料
+
+语言键：`trait.silentgear.flammable.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 装备在着火情形下会损失耐久，且可作为燃料。
 
 材料来源：木材 `wood`／主体。
 
 ### 词条：柔韧 `flexible`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：装备有时会受到更少的损伤（与“易碎”相抵消）
+
+语言键：`trait.silentgear.flexible.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 概率少消耗1点耐久；真正抵消对象是 Bending。部分中英文提示误写为 Brittle，应以JSON为准。
 
@@ -2340,6 +2493,12 @@
 材料来源：蔚蓝琥珀金 `azure_electrum`／手柄／杆；竹 `bamboo`／手柄／杆；烈焰金 `blaze_gold`／手柄／杆；烈焰棒 `blaze_rod`／手柄／杆；骨 `bone`／手柄／杆；青铜 `bronze`／手柄／杆；深红铁 `crimson_iron`／手柄／杆；深红钢 `crimson_steel`／手柄／杆；末地烛 `end_rod`／手柄／杆；细丝 `fine_silk`／绑定；细丝 `fine_silk`／弓弦；细丝织布 `fine_silk_cloth`／衬里；亚麻 `flax`／绑定；毛绒线 `fluffy_string`／绑定；铁 `iron`／手柄／杆；皮革 `leather`／握把；皮革 `leather`／衬里；下界岩 `netherrack`／主体；下界木 `netherwood`／主体；下界木 `netherwood`／手柄／杆；幻翼膜 `phantom_membrane`／衬里；信素 `signalum`／主体；信素 `signalum`／手柄／杆；筋 `sinew`／绑定；筋 `sinew`／弓弦；线 `string`／绑定；钛 `titanium`／手柄／杆；深红木 `wood/crimson`／手柄／杆；弯木 `wood/warped`／手柄／杆；木材 `wood`／手柄／杆；羊毛 `wool`／握把；羊毛 `wool`／衬里。
 
 ### 词条：浮石 `floatstoner`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：使用时以少量耐久度为代价制造并放置末地石
+
+语言键：`trait.silentgear.floatstoner.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 使用时消耗耐久放置末地石。
 
@@ -2362,6 +2521,12 @@
 
 ### 词条：掘金者 `gold_digger`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：有概率在采掘时增加粒掉落量
+
+语言键：`trait.silentgear.gold_digger.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 符合标签条件的挖掘掉落可能额外增加金属粒；不等于所有矿石翻倍。
 
 装备限制：装备类型=harvest_tool。
@@ -2382,6 +2547,12 @@
 
 ### 词条：贪婪 `greedy`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：提高矿石开采速度
+
+语言键：`trait.silentgear.greedy.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 提高矿石挖掘速度，不直接增加矿物数量。
 
 本地精确参数（数组按等级／件数顺序；`amplifier=0`表示药水I级）：
@@ -2399,6 +2570,12 @@
 
 ### 词条：坚固 `hard`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：当装备受损时，增加挖掘速度或降低远程伤害（与“柔软”相抵消）
+
+语言键：`trait.silentgear.hard.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，采掘速度提高、远程伤害下降；与柔软抵消。
 
 装备限制：装备类型=tool。
@@ -2415,6 +2592,12 @@
 材料来源：黑石 `blackstone`／主体；黑石 `blackstone`／手柄／杆；致密铁 `compressed_iron`／主体；深红铁 `crimson_iron`／主体；深红钢 `crimson_steel`／主体；强化黑曜石 `refined_obsidian`／主体；强化黑曜石 `refined_obsidian`／手柄／杆；钛 `titanium`／主体；钛 `titanium`／手柄／杆。
 
 ### 词条：沉重 `heavy`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：护甲降低移动速度
+
+语言键：`trait.silentgear.heavy.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 穿戴防具后降低移动速度。
 
@@ -2487,6 +2670,12 @@
 
 ### 词条：神圣 `holy`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：对亡灵造成额外伤害
+
+语言键：`trait.silentgear.holy.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 对亡灵类目标造成额外伤害。
 
 装备限制：装备类型=weapon。
@@ -2503,6 +2692,12 @@
 材料来源：barrier `barrier`／主体；青金石 `lapis_lazuli`／尖端。
 
 ### 词条：点燃 `ignite`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：以少量耐久度为代价点燃方块
+
+语言键：`trait.silentgear.ignite.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 消耗少量耐久点火，类似打火石操作。
 
@@ -2525,6 +2720,12 @@
 
 ### 词条：帝国宝藏 `imperial`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：采矿时有几率提升宝石掉落数量
+
+语言键：`trait.silentgear.imperial.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 符合标签的宝石掉落可能额外增加；并非所有方块通用时运。
 
 装备限制：装备类型=harvest_tool。
@@ -2545,11 +2746,23 @@
 
 ### 词条：坚不可摧 `indestructible`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：阻止耐久损失
+
+语言键：`trait.silentgear.indestructible.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 防止后续耐久损失；不会自动把已有损耗修满，也不提供掉落物免疫一切伤害。
 
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：无聊的话 `jabberwocky`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：’斯布里格，和那些滑溜的玩具/在瓦布里旋转和摇摆
+
+语言键：`trait.silentgear.jabberwocky.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 持有该词条、无精准采集地挖掘钻石矿石标签方块时，随机生成狼、猫、兔、鸡、鳕鱼、鲑鱼或河豚之一；属于彩蛋功能。
 
@@ -2558,6 +2771,12 @@
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：锯齿 `jagged`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：当工具受损时，增加近战伤害，减少远程伤害
+
+语言键：`trait.silentgear.jagged.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 耐久损失越多，近战伤害增加、远程伤害下降。
 
@@ -2573,6 +2792,12 @@
 材料来源：黑石 `blackstone`／主体；黑石 `blackstone`／手柄／杆；末地石 `end_stone`／主体；燧石 `flint`／主体；燧石 `flint`／手柄／杆；下界木 `netherwood`／主体；黑曜石 `obsidian`／主体；石英 `quartz`／主体；石英 `quartz`／尖端；深红木 `wood/crimson`／主体；弯木 `wood/warped`／主体；木材 `wood`／主体。
 
 ### 词条：猫眼 `kitty_vision`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：装备于头盔栏或Curios饰品栏时提供夜视效果
+
+语言键：`trait.silentgear.kitty_vision.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 头盔或饰物提供夜视。
 
@@ -2608,6 +2833,12 @@
 材料来源：金刚绿宝石 `dimerald`／饰物。
 
 ### 词条：光辉 `light`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：工具在光照下可以获得很大的采掘速度提升
+
+语言键：`trait.silentgear.light.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 穿戴防具后增加移动速度。
 
@@ -2680,6 +2911,14 @@
 
 ### 词条：幸运 `lucky`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：握着时增加幸运
+
+“幸运”是一种原版中提升运气的状态效果，在某些情况下会影响箱子战利品产出，与“时运”魔咒毫无干系！“幸运”无法影响矿物出产！
+
+语言键：`trait.silentgear.lucky.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 增加原版幸运属性，仅影响使用幸运参数的战利品表；不等于时运，不直接增加普通矿石掉落。
 
 抵消对象：`silentgear:cursed`。
@@ -2712,6 +2951,12 @@
 
 ### 词条：光辉 `lustrous`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：工具在光照下可以获得很大的挖掘速度提升
+
+语言键：`trait.silentgear.lustrous.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 在光照条件下提高采掘速度；不是夜视或伤害加成。
 
 装备限制：装备类型=harvest_tool。
@@ -2719,6 +2964,12 @@
 材料来源：铋 `bismuth`／主体；铋黄铜 `bismuth_brass`／主体；铋钢 `bismuth_steel`／主体；钻石 `diamond`／主体；钻石 `diamond`／手柄／杆；钻石 `diamond`／尖端；琥珀金 `electrum`／手柄／杆；萤石 `glowstone`／尖端；强化荧石 `refined_glowstone`／主体；强化荧石 `refined_glowstone`／手柄／杆；信素 `signalum`／主体；信素 `signalum`／手柄／杆。
 
 ### 词条：熔岩 `magmatic`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：自动熔炼
+
+语言键：`trait.silentgear.magmatic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 自动熔炼采掘掉落；熔炼产物不应用时运，避免刷物品。
 
@@ -2728,11 +2979,23 @@
 
 ### 词条：磁力 `magnetic`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：吸引附近的物品
+
+语言键：`trait.silentgear.magnetic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 吸引附近掉落物，等级提高吸引范围。
 
 材料来源：致密铁 `compressed_iron`／手柄／杆；铁 `iron`／主体；铁 `iron`／手柄／杆；精炼铁 `refined_iron`／手柄／杆。
 
 ### 词条：韧性 `malleable`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：装备有时会受到更少的损伤(与“易碎”相抵消)
+
+语言键：`trait.silentgear.malleable.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 概率少消耗1点耐久；与脆性抵消。
 
@@ -2750,6 +3013,12 @@
 材料来源：铝 `aluminum`／主体；铝 `aluminum`／手柄／杆；铝钢 `aluminum_steel`／主体；铝钢 `aluminum_steel`／手柄／杆；蔚蓝琥珀金 `azure_electrum`／主体；蔚蓝琥珀金 `azure_electrum`／尖端；蔚蓝银 `azure_silver`／主体；蔚蓝银 `azure_silver`／尖端；铋 `bismuth`／主体；铋 `bismuth`／手柄／杆；铋黄铜 `bismuth_brass`／主体；铋黄铜 `bismuth_brass`／手柄／杆；铋钢 `bismuth_steel`／主体；铋钢 `bismuth_steel`／手柄／杆；烈焰金 `blaze_gold`／主体；烈焰棒 `blaze_rod`／手柄／杆；黄铜 `brass`／主体；黄铜 `brass`／手柄／杆；致密铁 `compressed_iron`／主体；致密铁 `compressed_iron`／手柄／杆；深红铁 `crimson_iron`／主体；深红钢 `crimson_steel`／主体；琥珀金 `electrum`／主体；末地石 `end_stone`／手柄／杆；末影 `enderium`／主体；末影 `enderium`／手柄／杆；金 `gold`／主体；金 `gold`／尖端；高碳钢 `high_carbon_steel`／主体；殷钢 `invar`／主体；殷钢 `invar`／手柄／杆；铁 `iron`／主体；铁 `iron`／尖端；铅 `lead`／主体；流明 `lumium`／主体；流明 `lumium`／手柄／杆；镍 `nickel`／主体；镍 `nickel`／手柄／杆；锇 `osmium`／主体；锇 `osmium`／手柄／杆；铂 `platinum`／主体；铂 `platinum`／手柄／杆；红石合金 `redstone_alloy`／主体；红石合金 `redstone_alloy`／手柄／杆；强化荧石 `refined_glowstone`／主体；强化荧石 `refined_glowstone`／手柄／杆；精炼铁 `refined_iron`／主体；精炼铁 `refined_iron`／手柄／杆；强化黑曜石 `refined_obsidian`／主体；强化黑曜石 `refined_obsidian`／手柄／杆；银 `silver`／主体；银 `silver`／手柄／杆；钢 `steel`／主体；钢 `steel`／手柄／杆；锡 `tin`／主体；锡 `tin`／手柄／杆；钛 `titanium`／主体；铀 `uranium`／主体；铀 `uranium`／手柄／杆；锌 `zinc`／主体；锌 `zinc`／手柄／杆。
 
 ### 词条：超凡 `mighty`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：提供力量和/或急迫增益，增益强度与特性等级成正比
+
+语言键：`trait.silentgear.mighty.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 工具／饰物给予急迫，工具在较高等级还给予力量；等级映射见参数。
 
@@ -2805,6 +3074,12 @@
 
 ### 词条：月球行走 `moonwalker`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：我不相信重力！
+
+语言键：`trait.silentgear.moonwalker.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 降低实体重力，影响落下与跳跃手感；不是飞行或摔落免疫。
 
 装备限制：(装备类型=boots 或 装备类型=curio)。
@@ -2834,6 +3109,12 @@
 材料来源：蔚蓝银 `azure_silver`／主体。
 
 ### 词条：多重破坏 `multi_break`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：未完成，无代码
+
+语言键：`trait.silentgear.multi_break.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 数据保留的未实现词条，不能当作连锁采矿功能。
 
@@ -2888,6 +3169,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：有机 `organic`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：获得附魔效果，但当物品损坏时失去魔法伤害
+
+语言键：`trait.silentgear.organic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，附魔能力提高、魔法伤害字段降低。
 
 抵消对象：`silentgear:eroded`。
@@ -2902,6 +3189,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：岩石 `racker`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：消耗耐久以放置下界岩
+
+语言键：`trait.silentgear.racker.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 消耗耐久放置下界岩。
 
@@ -2923,6 +3216,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：长臂 `reach`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：提升触及范围
+
+语言键：`trait.silentgear.reach.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 增加方块交互距离，不是明确的近战攻击距离加成。
 
@@ -2958,6 +3257,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：折射 `refractive`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：使用时放置幻光
+
+语言键：`trait.silentgear.refractive.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 消耗耐久放置幻光照明方块。
 
 装备限制：装备类型=tool。
@@ -2979,6 +3284,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：复生 `renew`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：随时间推移缓慢修复装备
+
+语言键：`trait.silentgear.renew.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 每秒以1.8%×等级的概率修复，触发时修复1×等级点耐久；不是每秒必定修复。
 
 本地精确参数（数组按等级／件数顺序；`amplifier=0`表示药水I级）：
@@ -2993,6 +3304,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：紫晶 `amethyst`／主体；幻翼膜 `phantom_membrane`／主体。
 
 ### 词条：造路 `road_maker`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：将泥土类方块转化为土径
+
+语言键：`trait.silentgear.road_maker.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 将适合的草方块转换成草径，属于使用功能。
 
@@ -3022,6 +3339,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：淳朴 `rustic`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：提高协同效应（少于100%生效）
+
+语言键：`trait.silentgear.rustic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 基础协同较低时提供补偿；有效区间以参数为准。
 
 抵消对象：`silentgear:synergistic`。
@@ -3042,6 +3365,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：锋利 `sharp`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：工具受损时获得采掘速度与攻击速度增益
+
+语言键：`trait.silentgear.sharp.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 耐久损失越多，采掘速度和近战伤害增加；本地中文把后者写成攻击速度，是误译。
 
 装备限制：装备类型=tool。
@@ -3056,6 +3385,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：青铜 `bronze`／主体。
 
 ### 词条：丝滑 `silky`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：为采掘工具添加精准采集附魔
+
+语言键：`trait.silentgear.silky.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 给采掘工具添加精准采集附魔。
 
@@ -3082,11 +3417,23 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：雪地行者 `snow_walker`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：在细雪上行走不会陷进去
+
+语言键：`trait.silentgear.snow_walker.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 穿戴相关防具或饰物可走过细雪而不陷入。
 
 材料来源：细丝织布 `fine_silk_cloth`／主体；皮革 `leather`／主体；羊毛 `wool`／主体。
 
 ### 词条：柔软 `soft`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：当工具受损时，降低采掘速度（与“坚固”相抵消）
+
+语言键：`trait.silentgear.soft.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 耐久损失越多，采掘速度下降；与坚硬抵消。
 
@@ -3104,6 +3451,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：勺子 `spoon`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：镐子可以挖掘泥土
+
+语言键：`trait.silentgear.spoon.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 让镐可以有效挖掘土类方块。
 
 装备限制：装备类型=pickaxe。
@@ -3111,6 +3464,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：没有材料直接授予；可能来自专用部件、兼容或保留定义。
 
 ### 词条：恒星 `stellar`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：护甲给予速度和跳跃提升，物品会慢慢自我修复
+
+语言键：`trait.silentgear.stellar.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 概率自修复；防具根据装备件数提供速度和跳跃提升。
 
@@ -3149,6 +3508,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：坚实 `sturdy`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：装备时常会削减自身所收到的损伤
+
+语言键：`trait.silentgear.sturdy.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 较高概率减少1点耐久损耗，不等于绝对不损坏。
 
 抵消对象：`silentgear:brittle`。
@@ -3165,6 +3530,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：深红钢 `crimson_steel`／手柄／杆；末地烛 `end_rod`／手柄／杆；提尔钢 `tyrian_steel`／主体；提尔钢 `tyrian_steel`／手柄／杆。
 
 ### 词条：速泳 `swift_swim`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：提升游泳速度
+
+语言键：`trait.silentgear.swift_swim.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 增加游泳速度。
 
@@ -3194,6 +3565,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：协同作用 `synergistic`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：装备获得协同加成（如果基础值大于100%）
+
+语言键：`trait.silentgear.synergistic.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 基础协同达到适用条件时提高协同；不是简单把所有属性直接加4%。
 
 抵消对象：`silentgear:crude`。
@@ -3212,6 +3589,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：铝 `aluminum`／主体；铝 `aluminum`／手柄／杆；铝钢 `aluminum_steel`／主体；铝钢 `aluminum_steel`／手柄／杆；绿宝石 `emerald`／主体；绿宝石 `emerald`／尖端。
 
 ### 词条：终端 `terminus`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：使用时创造和放置石头
+
+语言键：`trait.silentgear.terminus.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 消耗耐久放置石头。
 
@@ -3234,6 +3617,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：龟息 `turtle`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：延长屏息时间
+
+语言键：`trait.silentgear.turtle.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 延长水下屏息时间，不等于永久水下呼吸。
 
 装备限制：(装备类型=helmet 或 装备类型=curio)。
@@ -3241,6 +3630,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：海龟壳 `turtle`／主体。
 
 ### 词条：毒液 `venom`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：攻击时对目标施加中毒效果
+
+语言键：`trait.silentgear.venom.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 攻击时使目标中毒，持续时间随等级增长。
 
@@ -3296,6 +3691,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 
 ### 词条：虚空庇佑 `void_ward`
 
+<!-- game-translation:start -->
+**游戏汉化原文**：拯救坠入虚空的穿戴者
+
+语言键：`trait.silentgear.void_ward.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
+
 在虚空伤害触发时帮助玩家向上脱离，并给予漂浮／缓降；不是创造模式无敌。
 
 装备限制：装备类型=armor。
@@ -3303,6 +3704,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：提尔钢 `tyrian_steel`／主体。
 
 ### 词条：火匠 `vulcan`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：以大量耐久度为代价放置黑曜石
+
+语言键：`trait.silentgear.vulcan.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 高耐久成本放置黑曜石，带冷却。
 
@@ -3324,6 +3731,12 @@ NuclearCraft兼容示例，写入 ncRadiationResistance NBT；标注未测试，
 材料来源：强化黑曜石 `refined_obsidian`／尖端。
 
 ### 词条：拓宽 `widen`
+
+<!-- game-translation:start -->
+**游戏汉化原文**：提升锤与开掘铲的作用范围
+
+语言键：`trait.silentgear.widen.desc`。以下说明保留源码与计算规则核对结果。
+<!-- game-translation:end -->
 
 扩大锤子和开掘铲的范围；I／II／III对应5×5／7×7／9×9。
 

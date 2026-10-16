@@ -1,6 +1,6 @@
 # Silent Gear 配装工坊
 
-React + TypeScript + Vite 的静态网页。基于当前 ATM9 的 Silent Gear 3.6.7 材料数据，配置 32 种装备，计算单件基础属性并查询词条说明。桌面以全幅 Canvas 为背景，四个浮动面板贴四角、距边缘 16px；手机改为可滚动面板。
+React + TypeScript + Vite 的静态网页。基于当前 ATM9 的 Silent Gear 3.6.7 材料数据，配置 32 种装备，计算单件基础属性并查询词条说明。桌面以全幅等高线 Canvas 为背景，四个浮动面板贴四角、距边缘 16px；手机改为可滚动面板。
 
 ## 运行
 
@@ -26,7 +26,8 @@ npm run preview -- --port 4173
 2. 从兼容材料库装配材料，调整品级和星光充能。
 3. 右侧即时显示属性与词条；悬停、键盘聚焦或轻触词条查看说明。
 4. 拖动耐久损耗滑块观察磨损相关效果。用“固定对比”保留同类装备基准。
-5. 配装可导出/导入 JSON，也可复制分享链接。非法或不兼容导入会保留当前方案。
+5. 打开“对比工作台”，保存最多三个配装快照，与当前实时配装并排比较；“材料候选”只替换当前部件材料，其余条件相同。可选基准、只看差异、应用某列；快照跨装备类型保留。
+6. 配装可导出/导入 JSON，也可复制分享链接。非法或不兼容导入会保留当前方案。
 
 ## 工程结构
 
@@ -81,7 +82,7 @@ npm run test:browser
 
 ## 字体与素材
 
-正文使用 **HarmonyOS Sans SC**，英文标签和数字使用 **Monocraft v4.2.1**。字体通过本地 WOFF2 加载，不依赖 Google Fonts。HarmonyOS 提供 Medium 和 Bold 两个现成字重，正文使用 Medium；未修改或裁剪其字形。
+正文使用 **HarmonyOS Sans SC**，英文标签和数字使用 **Monocraft v4.2.1**。字体通过本地 WOFF2 加载，不依赖 Google Fonts。HarmonyOS 提供 Medium 和 Bold 两个现成字重，正文使用 Medium；现按 Unicode 分为界面常用字、材料词条字、扩展字形三组，浏览器只请求当前文字需要的组，保留原始全部字符覆盖。
 
 Monocraft 发布包原本提供 TTF/OTF，本工程用 fontTools 将 Regular TTF 转为 WOFF2，保留全字库、提示信息和许可证。原始 ZIP 与整套 TTF 保留在 `assets-sources/fonts/`，不复制到生产目录。需要重建时：
 
@@ -91,3 +92,20 @@ python assets-sources/fonts/convert_monocraft.py
 ```
 
 字体与素材的真实来源、许可见 [第三方来源](THIRD_PARTY_NOTICES.md)。
+
+## 加载优化与重新生成字体
+
+字体分块使用用户 `tff2woff2` 项目的 `convert_one` 逻辑，副本位于 `assets-sources/fonts/ttf_to_web.py`。完整原始 WOFF2 放在 `assets-sources/fonts/originals/`，不进入静态发布目录。执行：
+
+```sh
+python -m pip install fonttools brotli
+python assets-sources/fonts/build_webfonts.py
+```
+
+脚本从 `src/` 界面文案与 `src/data.js` 材料、词条自动收集字符，生成六个不重叠的 WOFF2 文件和 `src/fonts.generated.css`。每组使用 `unicode-range` 按需加载，并验证所有源字符仍被覆盖。修改文案或重新提取汉化后可重跑；常规 `npm ci && npm run build` 使用已生成文件，无需 Python。新增未收录的字符仍会通过扩展字形加载，而非缺字。
+
+Three.js 预览独立为异步模块；界面与计算先运行。下载过程中显示加载提示，下载失败时保留配装功能。体积测量与验证见 `artifacts/loading-evidence.md`。
+
+## 汉化数据
+
+补丁 JAR 与 KubeJS 的语言资源已提取到 `translations/silentgear.zh_cn.json`。词条浮层分别显示游戏汉化和计算说明；数值规则不由汉化文本推断。重复运行提取的方法与缺失条目见 `artifacts/translation-audit.md`；`prepare_data.py` 重建数据时自动应用语言快照。

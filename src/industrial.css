@@ -1,4 +1,5 @@
 /* Rahoo print assets and high-contrast assembly labels, over the existing layout. */
+.preview-status{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;font-size:12px;color:#b9c3ad}.preview-status b{color:#e1ec8c}.preview-status .chip-button{flex:none}.preview-symbol{font-size:72px;font-weight:400;opacity:.6}
 :root{--bg:#17191a;--panel:#232627f5;--line:#d7dcce20;--text:#eeeee4;--muted:#adb3ad;--accent:#e1ec8c;--orange:#f2a56d}
 #world{filter:grayscale(1) brightness(1.06)}
 .terrain-overlay{opacity:.07;mask-image:linear-gradient(90deg,#000,transparent 40%,#000)}
@@ -46,3 +47,10 @@
 .viewer-controls button{min-height:38px;min-width:38px;font-size:12px;border-color:#c3cdb55e}.viewer-hint{font-size:11px;color:#b1bba7}
 @media(max-width:1200px) and (min-width:861px){.viewer-controls button{font-size:10px;padding:6px}}
 @media(max-width:860px){.viewer-controls button{min-height:44px;min-width:44px;font-size:11px}}
+
+.tip-section{display:block;font-size:10px;letter-spacing:1px;color:#e1ec8c;margin-bottom:5px}.tooltip{max-height:min(580px,80dvh);overflow:auto}.stage-actions{flex-wrap:wrap}.stage-actions>.chip-button{white-space:nowrap}
+
+@media(max-width:860px){.stage-actions{display:grid;grid-template-columns:1fr 1fr;width:100%}.stage{height:634px}#workbench{padding-top:724px}.stage-actions .chip-button{font-size:12px}}
+
+/* The background is now solely the full-bleed topographic canvas. */
+.specimen:before{display:none}
