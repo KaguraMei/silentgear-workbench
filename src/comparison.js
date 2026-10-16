@@ -13,6 +13,36 @@ export function materialCandidate(build, slot, material) {
   return E.validate({...build, parts: {...build.parts, [slot]: {...build.parts[slot], material}}});
 }
 
+// Carry only compatible selections across blueprints; show every default replacement.
+export function blueprintCandidate(source, gear) {
+  if (!E.gears.some(item => item.id === gear)) throw new Error('未知蓝图');
+  const current = E.validate(source), next = E.defaultBuild(gear), replacedSlots = [];
+  next.wear = current.wear;
+  for (const slot of E.slots(gear)) {
+    const part = current.parts[slot];
+    if (part && (E.compatible(part.material, gear, slot) || (part.material === null && !E.required(gear, slot)))) {
+      next.parts[slot] = {...part};
+    } else replacedSlots.push(slot);
+  }
+  return {build: E.validate(next), replacedSlots};
+}
+
+export function mergeSnapshots(existing, incoming) {
+  const snapshots = [...existing], keys = new Set(existing.map(item => buildKey(item.build)));
+  const ids = new Set(existing.map(item => item.id));
+  let duplicates = 0, overflow = 0;
+  for (const item of incoming) {
+    const key = buildKey(item.build);
+    if (keys.has(key)) { duplicates++; continue; }
+    if (snapshots.length >= MAX_SNAPSHOTS) { overflow++; continue; }
+    let id = item.id, serial = 0;
+    while (ids.has(id) || id === 'live') id = item.id.slice(0,80) + '-import-' + (++serial);
+    snapshots.push({...item, id, build: E.validate(item.build)});
+    ids.add(id); keys.add(key);
+  }
+  return {snapshots, added: snapshots.length - existing.length, duplicates, overflow};
+}
+
 function strictBuild(value) {
   if (!value || value.version !== 1 || !E.gears.some(g => g.id === value.gear) || !Number.isFinite(value.wear) || value.wear < 0 || value.wear > 90) throw new Error('无效快照');
   for (const slot of E.slots(value.gear)) {
@@ -42,9 +72,9 @@ export function restoreSnapshots(raw) {
   } catch { return {snapshots: [], discarded: 1}; }
 }
 
-const finalKeys = {durability: 'final_durability', melee_damage: 'attack_damage', attack_speed: 'attacks_per_second', armor: 'final_armor', knockback_resistance: 'knockback_percent'};
+const finalKeys = {durability: 'final_durability', armor_durability: 'final_durability', melee_damage: 'attack_damage', attack_speed: 'attacks_per_second', armor: 'final_armor', knockback_resistance: 'knockback_percent'};
 export function applicableStats(build) {
-  return E.relevantStats(build.gear).filter(key => !E.excludedStats(build.gear).includes(key)).map(key => finalKeys[key] || key);
+  return [...new Set(E.relevantStats(build.gear).filter(key => !E.excludedStats(build.gear).includes(key)).map(key => finalKeys[key] || key))];
 }
 
 export function statDelta(currentBuild, currentResult, baselineBuild, baselineResult, key) {
