@@ -1,6 +1,6 @@
 /* The inspection desk: mineral green, dark metal and calibrated copper. */
 :root{--bg:#101615;--panel:#19211fF5;--line:#ced7c519;--muted:#a0afa5;--accent:#c7dfa0;--orange:#d6ae7d}
-.terrain-overlay{position:fixed;inset:0;pointer-events:none;background:url('../public/decor/topographic.svg') center/cover;opacity:.09;mask-image:linear-gradient(90deg,#000,transparent 36%,transparent 64%,#000)}
+.terrain-overlay{position:fixed;inset:0;pointer-events:none;background:url('/decor/topographic.svg') center/cover;opacity:.09;mask-image:linear-gradient(90deg,#000,transparent 36%,transparent 64%,#000)}
 #world{filter:saturate(.55) brightness(.72)}
 .panel{border-radius:7px;border-color:#b3c5af29;background:linear-gradient(135deg,#29332c40,transparent 45%),var(--panel);box-shadow:0 12px 35px #0004,0 1px 0 #ffffff08 inset}
 .panel:before{content:'';position:absolute;top:0;left:20px;width:38px;height:2px;background:var(--orange);pointer-events:none}

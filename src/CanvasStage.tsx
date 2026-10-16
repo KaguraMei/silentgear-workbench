@@ -43,14 +43,14 @@ export function GearArt({build}: {build: Build}) {
     renderer.toneMapping = THREE.ACESFilmicToneMapping;
     renderer.toneMappingExposure = 1.3;
     renderer.shadowMap.enabled = true;
-    renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+    renderer.shadowMap.type = THREE.PCFShadowMap;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(36, 1, .1, 30);
     camera.position.set(0, .3, 6.3);
     camera.lookAt(0, -.08, 0);
     const pivot = new THREE.Group();
     scene.add(pivot);
-    scene.add(new THREE.HemisphereLight('#d8e8d0', '#3b4337', 2.4));
+    scene.add(new THREE.HemisphereLight('#e7e8de', '#25292c', 2.2));
     const key = new THREE.DirectionalLight('#fff0d1', 3.8);
     key.position.set(-3, 5, 5);
     key.castShadow = true;
@@ -59,21 +59,30 @@ export function GearArt({build}: {build: Build}) {
     key.shadow.camera.right = key.shadow.camera.top = 3;
     key.shadow.normalBias = .025;
     scene.add(key);
-    const rim = new THREE.DirectionalLight('#a6d6bf', 3);
+    const rim = new THREE.DirectionalLight('#e0e8ba', 2.5);
     rim.position.set(4, 1, -3);
     scene.add(rim);
-    const pedestal = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.45, .13, 8), new THREE.MeshStandardMaterial({color: '#30372b', roughness: .84, metalness: .18}));
+    const pedestal = new THREE.Mesh(new THREE.CylinderGeometry(1.3, 1.45, .13, 8), new THREE.MeshStandardMaterial({color: '#252c2e', roughness: .6, metalness: .45}));
     pedestal.position.y = -1.62;
     pedestal.receiveShadow = true;
     scene.add(pedestal);
-    const top = new THREE.Mesh(new THREE.CylinderGeometry(1.22, 1.22, .025, 8), new THREE.MeshStandardMaterial({color: '#556343', roughness: .7, metalness: .28}));
+    const top = new THREE.Mesh(new THREE.CylinderGeometry(1.22, 1.22, .025, 8), new THREE.MeshStandardMaterial({color: '#434d4d', roughness: .78, metalness: .38}));
     top.position.y = -1.54;
     top.receiveShadow = true;
     scene.add(top);
-    const trim = new THREE.Mesh(new THREE.TorusGeometry(1.32, .012, 4, 8), new THREE.MeshStandardMaterial({color: '#c4a66c', roughness: .42, metalness: .55}));
+    const trim = new THREE.Mesh(new THREE.TorusGeometry(1.32, .012, 4, 8), new THREE.MeshStandardMaterial({color: '#d2de8c', roughness: .42, metalness: .55}));
     trim.rotation.x = Math.PI / 2;
     trim.position.y = -1.54;
     scene.add(trim);
+    // Repeated recessed fasteners make the inspection plinth read as machined metal.
+    const fasteners = new THREE.InstancedMesh(new THREE.CylinderGeometry(.034, .034, .012, 6), new THREE.MeshStandardMaterial({color: '#171e20', roughness: .5, metalness: .65}), 8);
+    const boltTransform = new THREE.Matrix4();
+    for (let i = 0; i < 8; i++) {
+      const angle = (i + .5) * Math.PI / 4;
+      boltTransform.makeTranslation(Math.cos(angle) * 1.12, -1.518, Math.sin(angle) * 1.12);
+      fasteners.setMatrixAt(i, boltTransform);
+    }
+    scene.add(fasteners);
     let mesh: THREE.Mesh | null = null, frame = 0, spinning = false, stopped = false, previousTime = 0;
     let rotationX = -.08, rotationY = -.32, zoom = 1;
     let activePointer: number | null = null, lastX = 0, lastY = 0;
@@ -193,7 +202,7 @@ export function GearArt({build}: {build: Build}) {
       canvas.removeEventListener('webglcontextlost', contextLost);
       document.removeEventListener('visibilitychange', startAnimation);
       if (mesh) disposeMesh(mesh);
-      for (const item of [pedestal, top, trim]) disposeMesh(item);
+      for (const item of [pedestal, top, trim, fasteners]) disposeMesh(item);
       key.shadow.map?.dispose();
       renderer.dispose();
     };

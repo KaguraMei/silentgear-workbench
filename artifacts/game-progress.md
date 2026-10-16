@@ -1,5 +1,15 @@
 # Workbench visual revision · 2026-10-15
 
+## Current checkpoint · 2026-10-16
+
+User priority: visual design and Rahoo assets. Device migration, 3D interactions and static subpaths are already manually verified by the user; do not spend this pass repeating that suite. Keep local delivery only.
+
+Completed: graphite canvas, light industrial assembly nameplate, lime primary metric/action/selection, numbered equipment-panel rails, Rahoo halftone/diagonal stripes/barcode crops, clickable component annotations, refined metal platform with instanced fasteners. Existing local HarmonyOS Sans and Monocraft WOFF2 retained. User's converter project at `C:/Users/KaguraAyano/PycharmProjects/tff2woff2` located; font optimization deferred behind design priority.
+
+Independent visual review found annotation contrast against dots and small viewer buttons; both fixed. Current visual evidence and scope: `design-evidence-2026-10-16.md`. No pending asset jobs or publishing actions.
+
+---
+
 Scope: retain the Silent Gear calculator; add an actual Three.js equipment inspector, local HarmonyOS Sans and Monocraft, decorative assets exported from rahoo.online, and a GitHub Pages build. Do not publish.
 
 Baseline: `three` was installed but CanvasStage used only Canvas 2D. Four-corner panels and calculator behavior are retained. Existing baseline capture: desktop-first.png.
